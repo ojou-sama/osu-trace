@@ -3,8 +3,19 @@
 declare global {
 	namespace App {
 		// interface Error {}
-		// interface Locals {}
-		// interface PageData {}
+		interface OsuAuthUser {
+			id: number;
+			username: string;
+			avatarUrl: string;
+		}
+
+		interface Locals {
+			authUser: OsuAuthUser | null;
+		}
+
+		interface PageData {
+			currentUser: OsuAuthUser | null;
+		}
 		// interface PageState {}
 		// interface Platform {}
 	}
